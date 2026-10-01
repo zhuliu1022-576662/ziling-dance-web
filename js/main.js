@@ -34,7 +34,7 @@ const VIDEOS = [
 
 const SCHEDULE = [
   { loc_en: "Westborough", loc_zh: "韦斯特伯勒", day_en: "Sunday",   day_zh: "周日", time: "6:00 – 7:30 PM"   },
-  { loc_en: "Westborough", loc_zh: "韦斯特伯勒", day_en: "Monday",   day_zh: "周一", time: "7:30 – 9:00 PM",  class_en: "Shenyun + Combinations", class_zh: "神韵+组合" },
+  { loc_en: "Westborough", loc_zh: "韦斯特伯勒", day_en: "Monday",   day_zh: "周一", time: "7:30 – 9:00 PM",  class_en: "Shenyun + Combinations", class_zh: "身韵+组合" },
   { loc_en: "Natick",      loc_zh: "纳蒂克",     day_en: "Saturday", day_zh: "周六", time: "6:30 – 8:00 PM"   },
   { loc_en: "Cambridge",   loc_zh: "剑桥",       day_en: "Sunday",   day_zh: "周日", time: "10:00 – 11:30 AM" },
 ];
