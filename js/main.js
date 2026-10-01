@@ -18,9 +18,9 @@
 */
 
 const GALLERY_ITEMS = [
-  { src: "images/gallery/ziling3.jpg", caption_en: "Ma Ziling — solo performance",       caption_zh: "马子玲老师独舞" },
+  { src: "images/gallery/ziling3.jpg", caption_en: "Ziling Ma — solo performance",       caption_zh: "马子玲老师独舞" },
   { src: "images/gallery/ziling4.jpg", caption_en: "Ensemble performance",                caption_zh: "群舞演出" },
-  { src: "images/gallery/ziling1.JPG", caption_en: "Ma Ziling — Chinese Classical Dance", caption_zh: "中国古典舞老师马子玲" },
+  { src: "images/gallery/ziling1.JPG", caption_en: "Ziling Ma — Chinese Classical Dance", caption_zh: "中国古典舞老师马子玲" },
   // Add more photos here as the gallery grows
 ];
 

@@ -23,7 +23,7 @@ const LANG = {
     about_foc_val:   "Chinese Classical Dance",
 
     instr_title:     "Instructor",
-    instr_name:      "Ma Ziling · 马子玲",
+    instr_name:      "Ziling Ma · 马子玲",
 
     gallery_title:   "Gallery",
     gallery_sub:     "Moments of grace, captured",
