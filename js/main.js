@@ -83,12 +83,19 @@ function renderGallery() {
 
   visibleItems = [...GALLERY_ITEMS];
 
+  // Mosaic pattern per group of 5: large(2×2), normal, normal, normal, wide(2×1)
+  const sizeClass = i => { const p = i % 5; if (p === 0) return 'large'; if (p === 4) return 'wide'; return ''; };
+
   grid.classList.add('grid-active');
-  grid.innerHTML = visibleItems.map((item, i) => `
-    <div class="gallery-item" data-idx="${i}" role="button" tabindex="0" aria-label="View photo">
-      <img src="${item.src}" alt="${currentLang === 'zh' ? item.caption_zh : item.caption_en}" loading="lazy">
-    </div>
-  `).join('');
+  grid.innerHTML = visibleItems.map((item, i) => {
+    const cls = sizeClass(i);
+    const caption = currentLang === 'zh' ? item.caption_zh : item.caption_en;
+    return `
+      <div class="gallery-item${cls ? ' ' + cls : ''}" data-idx="${i}" role="button" tabindex="0" aria-label="View photo">
+        <img src="${item.src}" alt="${caption}" loading="lazy">
+        ${caption ? `<span class="gallery-caption">${caption}</span>` : ''}
+      </div>`;
+  }).join('');
 
   grid.querySelectorAll('.gallery-item').forEach(el => {
     el.addEventListener('click', () => openLightbox(+el.dataset.idx));
@@ -173,8 +180,8 @@ function renderVideos() {
 
   const iframeAttrs = 'allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"';
 
-  const cardHTML = (v, cls) => `
-    <div class="video-card">
+  const cardHTML = (v, cls, extraClass = '') => `
+    <div class="video-card${extraClass ? ' ' + extraClass : ''}">
       <div class="${cls}">
         <iframe src="${v.url}" ${iframeAttrs}></iframe>
       </div>
@@ -182,7 +189,7 @@ function renderVideos() {
     </div>`;
 
   wrap.innerHTML = `
-    ${regular.length ? `<div class="video-grid-regular">${regular.map(v => cardHTML(v, 'video-embed')).join('')}</div>` : ''}
+    ${regular.length ? `<div class="video-grid-regular">${regular.map((v, i) => cardHTML(v, 'video-embed', i === 0 ? 'video-card-featured' : '')).join('')}</div>` : ''}
     ${shorts.length  ? `<div class="video-grid-shorts">${shorts.map(v => cardHTML(v, 'video-embed-short')).join('')}</div>` : ''}
   `;
 }
