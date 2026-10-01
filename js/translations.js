@@ -40,6 +40,7 @@ const LANG = {
 
     contact_title:   "Contact",
     contact_sub:     "We’d love to hear from you",
+    contact_phone:   "Phone",
     contact_wechat:  "WeChat",
     contact_rednote: "Rednote (小红书)",
     contact_locs:    "Studio Locations",
@@ -91,6 +92,7 @@ const LANG = {
 
     contact_title:   "联系我们",
     contact_sub:     "期待与您相遇",
+    contact_phone:   "电话",
     contact_wechat:  "微信",
     contact_rednote: "小红书",
     contact_locs:    "教室地点",
