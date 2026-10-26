@@ -28,6 +28,7 @@ const VIDEOS = [
   { url: "https://www.youtube.com/embed/QC90JP2fgz0", title_en: "", title_zh: "" },
   { url: "https://www.youtube.com/embed/WfOysq66WiE", title_en: "", title_zh: "" },
   { url: "https://www.youtube.com/embed/ugDI6wplhfQ", title_en: "", title_zh: "" },
+  { url: "https://www.youtube.com/embed/KRLrPlz78ns", title_en: "", title_zh: "" },
   { url: "https://www.youtube.com/embed/k8I9YhdCqNU", title_en: "", title_zh: "", short: true },
   { url: "https://www.youtube.com/embed/B8OeQrKqe6M", title_en: "", title_zh: "", short: true },
 ];
