@@ -525,13 +525,12 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
 ══════════════════════════════════════ */
 #video-grid { display: flex; flex-direction: column; gap: 32px; }
 
-/* Regular — featured-first: first video full-width, rest in 2-col grid */
+/* Regular — 2×2 equal grid */
 .video-grid-regular {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 6px;
 }
-.video-card-featured { grid-column: span 2; }
 
 .video-embed {
   position: relative;

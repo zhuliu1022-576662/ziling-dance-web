@@ -185,8 +185,8 @@ function renderVideos() {
 
   const iframeAttrs = 'allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"';
 
-  const cardHTML = (v, cls, extraClass = '') => `
-    <div class="video-card${extraClass ? ' ' + extraClass : ''}">
+  const cardHTML = (v, cls) => `
+    <div class="video-card">
       <div class="${cls}">
         <iframe src="${v.url}" ${iframeAttrs}></iframe>
       </div>
@@ -194,7 +194,7 @@ function renderVideos() {
     </div>`;
 
   wrap.innerHTML = `
-    ${regular.length ? `<div class="video-grid-regular">${regular.map((v, i) => cardHTML(v, 'video-embed', i === 0 ? 'video-card-featured' : '')).join('')}</div>` : ''}
+    ${regular.length ? `<div class="video-grid-regular">${regular.map(v => cardHTML(v, 'video-embed')).join('')}</div>` : ''}
     ${shorts.length  ? `<div class="video-grid-shorts">${shorts.map(v => cardHTML(v, 'video-embed-short')).join('')}</div>` : ''}
   `;
 }
